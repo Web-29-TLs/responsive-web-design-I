@@ -1,3 +1,373 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* Your code starts here! */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 75%;
+}
+
+.header a {
+  text-decoration: none;
+  color: gray;
+}
+
+.content a {
+  width: 125px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  line-height: 1.5;
+  border: black 1px solid;
+  border-radius: 5px;
+  margin-top: 30px;
+  background: white;
+}
+
+.top-block {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 0px;
+  border-bottom: 1px black solid;
+}
+
+.innovate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.innovate h1 {
+  font-size: 70px;
+}
+
+.innovate a {
+  text-decoration: none;
+  color: black;
+  border: 1px black solid;
+  line-height: 1.5;
+  width: 50%;
+}
+
+.middle {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px black solid;
+  align-content: space-around;
+}
+
+.content {
+  width: 48.5%;
+  padding: 0px 0px;
+  margin: 20px 0px;
+}
+
+.program {
+  border: black 1px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: lightgray;
+  margin: 20px 0px;
+}
+
+.ser,
+.product,
+.vision {
+  width: 30%;
+}
+
+.middle .middle-img {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.facts {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.facts-info,
+.facts-box {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  width: 48%;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 40px 0px;
+}
+
+.phone {
+  line-height: 3;
+}
+
+.copyright {
+  text-align: center;
+  line-height: 4;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+
+  .header nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .logo {
+    width: 25%;
+    align-self: center;
+    padding: 10px 0px 35px 0px;
+  }
+
+  .top-block img {
+    display: none;
+  }
+
+  .facts {
+    flex-flow: column-reverse nowrap;
+    width: 100%;
+  }
+
+  .facts-info,
+  .facts-box {
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0px;
+  }
+
+  ul {
+    padding-top: 20px;
+  }
+
+  .program a {
+    align-self: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header,
+  nav,
+  .content {
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 10px 0px;
+  }
+
+  .logo {
+    order: -6;
+  }
+
+  .program {
+    flex-flow: column nowrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .program a {
+    align-self: center;
+  }
+
+  .facts {
+    flex-flow: column-reverse nowrap;
+    width: 100%;
+  }
+
+  .facts-info,
+  .facts-box {
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px 0px;
+  }
+
+  ul {
+    padding-top: 20px;
+  }
+
+  .header a {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    line-height: 2;
+    width: 100%;
+  }
+}
